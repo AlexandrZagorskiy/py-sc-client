@@ -38,6 +38,7 @@ jobs:
         password: ${{ secrets.PYPI_API_TOKEN }}
 
   build:
+    needs: deploy
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
